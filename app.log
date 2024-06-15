@@ -1,0 +1,276 @@
+2024-05-28 16:23:16,904 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:16,905 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,086 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "GET /login?next=/ HTTP/1.1" 200 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,150 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/content/site.css HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,150 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/content/bootstrap.min.css HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,152 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/scripts/modernizr-2.6.2.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,156 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/scripts/jquery-1.10.2.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,163 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/images/sign-in-with-ms.svg HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,179 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/scripts/bootstrap.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:23:30,202 INFO: 127.0.0.1 - - [28/May/2024 16:23:30] "[36mGET /static/scripts/respond.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:24:08,753 ERROR: Exception on /login [POST] [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3293, in raw_connection
+    return self.pool.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\create.py", line 645, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No connection could be made because the target machine actively refused it.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Admin\Desktop\cd1756-Azure-Applications-project\FlaskWebProject\views.py", line 68, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\query.py", line 2748, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\query.py", line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2180, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2047, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 1143, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3269, in connect
+    return self._connection_cls(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 2431, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3293, in raw_connection
+    return self.pool.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\create.py", line 645, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No connection could be made because the target machine actively refused it.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-05-28 16:24:08,775 INFO: 127.0.0.1 - - [28/May/2024 16:24:08] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:25:52,586 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:25:52,587 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:26:18,690 ERROR: Exception on /login [POST] [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py:828]
+Traceback (most recent call last):
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3293, in raw_connection
+    return self.pool.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\create.py", line 645, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+pyodbc.OperationalError: ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No connection could be made because the target machine actively refused it.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 1463, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 872, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 870, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\flask\app.py", line 855, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "C:\Users\Admin\Desktop\cd1756-Azure-Applications-project\FlaskWebProject\views.py", line 69, in login
+    user = User.query.filter_by(username=form.username.data).first()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\query.py", line 2748, in first
+    return self.limit(1)._iter().first()  # type: ignore
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\query.py", line 2847, in _iter
+    result: Union[ScalarResult[_T], Result[_T]] = self.session.execute(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2308, in execute
+    return self._execute_internal(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2180, in _execute_internal
+    conn = self._connection_for_bind(bind)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 2047, in _connection_for_bind
+    return trans._connection_for_bind(engine, execution_options)
+  File "<string>", line 2, in _connection_for_bind
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\orm\session.py", line 1143, in _connection_for_bind
+    conn = bind.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3269, in connect
+    return self._connection_cls(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 147, in __init__
+    Connection._handle_dbapi_exception_noconnection(
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 2431, in _handle_dbapi_exception_noconnection
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 145, in __init__
+    self._dbapi_connection = engine.raw_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\base.py", line 3293, in raw_connection
+    return self.pool.connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 452, in connect
+    return _ConnectionFairy._checkout(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 1269, in _checkout
+    fairy = _ConnectionRecord.checkout(pool)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 716, in checkout
+    rec = pool._do_get()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 170, in _do_get
+    self._dec_overflow()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\impl.py", line 167, in _do_get
+    return self._create_connection()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 393, in _create_connection
+    return _ConnectionRecord(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 678, in __init__
+    self.__connect()
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 903, in __connect
+    pool.logger.debug("Error on connect(): %s", e)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\util\langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\pool\base.py", line 898, in __connect
+    self.dbapi_connection = connection = pool._invoke_creator(self)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\create.py", line 645, in connect
+    return dialect.connect(*cargs, **cparams)
+  File "C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\sqlalchemy\engine\default.py", line 616, in connect
+    return self.loaded_dbapi.connect(*cargs, **cparams)
+sqlalchemy.exc.OperationalError: (pyodbc.OperationalError) ('08001', '[08001] [Microsoft][ODBC Driver 17 for SQL Server]TCP Provider: No connection could be made because the target machine actively refused it.\r\n (10061) (SQLDriverConnect); [08001] [Microsoft][ODBC Driver 17 for SQL Server]Login timeout expired (0); [08001] [Microsoft][ODBC Driver 17 for SQL Server]A network-related or instance-specific error has occurred while establishing a connection to SQL Server. Server is not found or not accessible. Check if instance name is correct and if SQL Server is configured to allow remote connections. For more information see SQL Server Books Online. (10061)')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2024-05-28 16:26:18,706 INFO: 127.0.0.1 - - [28/May/2024 16:26:18] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:05,462 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:05,462 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:05,462 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:07,117 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:07,147 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:30,192 INFO: 127.0.0.1 - - [28/May/2024 16:35:30] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:30,216 INFO: 127.0.0.1 - - [28/May/2024 16:35:30] "GET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:30,217 INFO: 127.0.0.1 - - [28/May/2024 16:35:30] "GET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:30,244 INFO: 127.0.0.1 - - [28/May/2024 16:35:30] "GET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:35:30,326 INFO: 127.0.0.1 - - [28/May/2024 16:35:30] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:38:49,128 INFO: 127.0.0.1 - - [28/May/2024 16:38:49] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:38:49,156 INFO: 127.0.0.1 - - [28/May/2024 16:38:49] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:38:49,157 INFO: 127.0.0.1 - - [28/May/2024 16:38:49] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:38:49,180 INFO: 127.0.0.1 - - [28/May/2024 16:38:49] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:38:49,218 INFO: 127.0.0.1 - - [28/May/2024 16:38:49] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:10,154 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:10,154 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:10,157 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:11,494 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:11,543 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:36,699 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:36,699 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:36,701 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:38,118 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:38,145 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:56,722 INFO: 127.0.0.1 - - [28/May/2024 16:39:56] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:56,751 INFO: 127.0.0.1 - - [28/May/2024 16:39:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:56,751 INFO: 127.0.0.1 - - [28/May/2024 16:39:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:56,776 INFO: 127.0.0.1 - - [28/May/2024 16:39:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:39:56,824 INFO: 127.0.0.1 - - [28/May/2024 16:39:56] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:34,411 INFO:  * Detected change in 'C:\\Users\\Admin\\Desktop\\cd1756-Azure-Applications-project\\config.py', reloading [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:34,524 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:36,210 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:36,223 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:41,301 INFO:  * Detected change in 'C:\\Users\\Admin\\Desktop\\cd1756-Azure-Applications-project\\config.py', reloading [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:41,396 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:43,092 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:43,106 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:44,152 INFO:  * Detected change in 'C:\\Users\\Admin\\Desktop\\cd1756-Azure-Applications-project\\config.py', reloading [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:44,257 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:45,817 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:45,824 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:50,059 INFO: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:50,059 INFO: [33mPress CTRL+C to quit[0m [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:50,059 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:51,639 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:41:51,642 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:42:12,881 INFO: 127.0.0.1 - - [28/May/2024 16:42:12] "[35m[1mPOST /login?next=/ HTTP/1.1[0m" 500 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:42:12,915 INFO: 127.0.0.1 - - [28/May/2024 16:42:12] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:42:12,919 INFO: 127.0.0.1 - - [28/May/2024 16:42:12] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:42:12,953 INFO: 127.0.0.1 - - [28/May/2024 16:42:12] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:42:13,003 INFO: 127.0.0.1 - - [28/May/2024 16:42:13] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:50:37,103 INFO:  * Detected change in 'C:\\Users\\Admin\\Desktop\\cd1756-Azure-Applications-project\\config.py', reloading [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:50:37,233 INFO:  * Restarting with stat [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:50:38,679 WARNING:  * Debugger is active! [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
+2024-05-28 16:50:38,689 INFO:  * Debugger PIN: 397-205-071 [in C:\users\admin\appdata\local\programs\python\python38\lib\site-packages\werkzeug\_internal.py:96]
